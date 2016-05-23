@@ -14,14 +14,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/app_name">
+            android:name=".activities.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".serices.MyIntentService"
+            android:exported="false" />
+
+        <provider
+            android:name=".providers.MyContentProvider"
+            android:authorities="com.warg.moneyflow.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
     </application>
 
 </manifest>

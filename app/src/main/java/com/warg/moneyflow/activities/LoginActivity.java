@@ -1,4 +1,4 @@
-package com.warg.moneyflow;
+package com.warg.moneyflow.activities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -26,6 +26,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.warg.moneyflow.R;
 import com.warg.moneyflow.asynctasks.GetJSONUsers;
 import com.warg.moneyflow.util.Prefs;
 

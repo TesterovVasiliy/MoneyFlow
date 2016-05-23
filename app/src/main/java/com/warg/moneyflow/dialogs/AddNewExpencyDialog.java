@@ -39,6 +39,8 @@ public class AddNewExpencyDialog extends DialogFragment {
         return builder.create();
     }
 
+    //test
+
     private void addNewExpency() {
         Toast.makeText(getActivity(), "Add from dialog", Toast.LENGTH_SHORT).show();
         MyIntentService.startActionInsertExpency(getActivity(), "Expense", 120);

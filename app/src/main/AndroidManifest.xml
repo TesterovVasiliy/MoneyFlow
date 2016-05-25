@@ -35,7 +35,15 @@
             android:name=".providers.MyContentProvider"
             android:authorities="com.warg.moneyflow.provider"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true" />
+
+        <activity
+            android:name=".activities.ExpensesActivity"
+            android:parentActivityName=".activities.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.DashboardActivity"></meta-data>
+        </activity>
     </application>
 
 </manifest>

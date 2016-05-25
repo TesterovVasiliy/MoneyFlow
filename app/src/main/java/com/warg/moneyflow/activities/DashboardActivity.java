@@ -1,5 +1,6 @@
 package com.warg.moneyflow.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,7 +13,7 @@ import android.view.View;
 import com.warg.moneyflow.R;
 import com.warg.moneyflow.dialogs.AddNewExpencyDialog;
 
-public class DashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,8 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        findViewById(R.id.btnDashboardShowExpenses).setOnClickListener(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -48,5 +51,15 @@ public class DashboardActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch ((v.getId())) {
+            case R.id.btnDashboardShowExpenses:
+                Intent intent = new Intent(this, ExpensesActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }
